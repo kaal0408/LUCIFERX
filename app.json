@@ -1,7 +1,7 @@
 {
   "name": "LUCIFERX",
-  "description": "DESTROYX is a Telegram userbot that running on Python , It help you to manage your telegram easily ",
-  "logo": "https://telegra.ph/file/9a8075c07a133f07305c6.jpg",
+  "description": "LuciferX is a Telegram userbot that running on Python , It help you to manage your telegram easily ",
+  "logo": "",
   "keywords": [
     "telegram",
     "userbot",
@@ -9,9 +9,9 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://t.me/DESTROYXsupport",
-  "website": "https://t.me/DXplugins",
-  "success_url": "https://t.me/CriMiNaL786",
+  "repository": "https://github.com/kaal0408/LUCIFERX",
+  "website": "https://GitHub.com/loverboyXD",
+  "success_url": "https://github.com/kaal0408",
   "stack": "container",
   "env": {
     "TELEGRAM_API_KEY": {
@@ -68,9 +68,6 @@
       "description": "Your photo link for !autopic command",
       "value": "https://telegra.ph/file/edc2836f4353c6b01bcb4.jpg",
       "required": false
-     
-    
-    
     },
     "OPEN_WEATHER_MAP_APPID": {
       "description": "need for !weather command, (API key)from https://api.openweathermap.org",
