@@ -1,3 +1,3 @@
 
-from userbot.javes_main.commands import *
+from userbot.lucifer_main.commands import *
 
