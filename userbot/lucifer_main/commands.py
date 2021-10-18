@@ -8,7 +8,7 @@ from os import remove
 from time import gmtime, strftime
 from traceback import format_exc
 from typing import List
-from userbot.javes_main.heroku_var import *
+from userbot.lucifer_main.heroku_var import *
 from userbot import *
 from sys import *
 from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
@@ -90,8 +90,8 @@ def load_module(shortname):
         import sys
         import importlib
         from pathlib import Path
-        path = Path(f"userbot/modules/{shortname}.py")
-        name = "userbot.modules.{}".format(shortname)
+        path = Path(f"userbot/plugins/{shortname}.py")
+        name = "userbot.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
@@ -101,8 +101,8 @@ def load_module(shortname):
         import sys
         import importlib
         from pathlib import Path
-        path = Path(f"userbot/modules/{shortname}.py")
-        name = "userbot.modules.{}".format(shortname)
+        path = Path(f"userbot/plugins/shortname}.py")
+        name = "userbot.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.bot = bot
@@ -110,12 +110,12 @@ def load_module(shortname):
         mod.Var = Var
         mod.command = command
         mod.logger = logging.getLogger(shortname)
-        sys.modules["uniborg.util"] = userbot.events
+        sys.plugins["uniborg.util"] = userbot.events
         mod.Config = Config
         mod.borg = bot
         sys.modules["userbot.events"] = userbot.events
         spec.loader.exec_module(mod)
-        sys.modules["userbot.modules."+shortname] = mod
+        sys.plugin["userbot.plugin."+shortname] = mod
         print("Successfully (re)imported "+shortname)
 
 def remove_plugin(shortname):
@@ -126,7 +126,7 @@ def remove_plugin(shortname):
             del LOAD_PLUG[shortname]
 
         except:
-            name = f"userbot.modules.{shortname}"
+            name = f"userbot.plugin.{shortname}"
 
             for i in reversed(range(len(bot._event_builders))):
                 ev, cb = bot._event_builders[i]
@@ -169,7 +169,7 @@ def rekcah05(pattern=None, **args):
     is_message_enabled = True
     return events.NewMessage(**args)
     
-def javess(**args):
+def lucifer(**args):
     args["func"] = lambda e: e.via_bot_id is None
     stack = inspect.stack()
     previous_stack_frame = stack[1]
@@ -228,8 +228,8 @@ def javess(**args):
             except BaseException:
                 if not disable_errors:
                     date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
-                    text = "**JAVES ERROR REPORT**\n"
-                    text += "Send this to @javes2support if you cant find issue\n"
+                    text = "**Lucifer ERROR REPORT**\n"
+                    text += "Send this to @Lucifer_support_group if you cant find issue\n"
                     ftext = "========== DISCLAIMER =========="
                     ftext += "\nThis file uploaded only logchat,"                
                     ftext += "\nreport to admin this error if you cant find any issue"
@@ -344,7 +344,7 @@ class Loader():
         bot.add_event_handler(func, events.NewMessage(**args))
 
 
-data = json.load(open("userbot/javes_main/extra/meaning.json")) 
+data = json.load(open("userbot/lucifer_main/extra/meaning.json")) 
 def meaning(w): 
 	w = w.lower() 
 	if w in data: 
