@@ -10,7 +10,7 @@ from telethon import TelegramClient
 from telethon.sessions import StringSession
 from var import Var
 load_dotenv("config.env")
-from userbot.javes_main.heroku_var import config
+from userbot.lucifer_main.heroku_var import config
 
 sed = logging.getLogger("WARNING")
 sedprint = logging.getLogger("WARNING")
@@ -234,10 +234,10 @@ else:
     
 from userbot import ALIVE_NAME
 from userbot import DEFAULTUSER
-JAVES_MSG = (f"Javes ")
+LUCIFER_MSG = (f"Lucifer ")
 ORI_MSG = (f"Hello Sir, I can't allow you to {ALIVE_NAME}'s PM without his permissions please be patient, Thankyou ")
 BLOCK_MSG = (f"I am not going to allow you to spam {DEFAULTUSER}'s PM, You have been blocked ")
-JAVES_NNAME = str(JAVES_NAME) if JAVES_NAME else str(JAVES_MSG)
+LUCIFER_NNAME = str(LUCIFER_NAME) if JAVES_NAME else str(JAVES_MSG)
 AFK_MSG = (f"Hello Sir, {DEFAULTUSER} is offline Just leave Your message, Thankyou!")
 BIO_MSG = (f"")
 ALIVE_S_MSG = (f"I am Alone Survivor!")
@@ -269,7 +269,7 @@ if S3:
 if BOT_TOKEN:    
     tebot = TelegramClient("bot", API_KEY, API_HASH).start(bot_token=BOT_TOKEN)
 
-borg = bot = javes = client
+borg = bot = lucifer = client
 COUNT_MSG = 0
 USERS = {}
 COUNT_PM = {}
